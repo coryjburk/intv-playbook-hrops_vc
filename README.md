@@ -8,8 +8,8 @@ It bundles a 48-question bank with layered model answers, the core HR Ops framew
 
 ## Live links
 
-- **Playbook:** `https://coryjburk.github.io/intv-playbook-hrops_vc/`
-- **User manual (styled):** `https://coryjburk.github.io/intv-playbook-hrops_vc/manual/`
+- **Playbook:** https://coryjburk.github.io/intv-playbook-hrops_vc/
+- **User manual (styled):** https://coryjburk.github.io/intv-playbook-hrops_vc/manual/
 
 ---
 
@@ -17,8 +17,8 @@ It bundles a 48-question bank with layered model answers, the core HR Ops framew
 
 | File | What it is |
 |------|------------|
-| `hr_ops_interview_playbook.html` | The playbook itself. Open it in a browser — everything runs locally. |
-| `hr_ops_playbook_user_manual.html` | A styled, end-user manual (for students), matching the playbook's design. Best viewed via GitHub Pages. |
+| `index.html` | The playbook itself, served as the repo's default page. Open it in a browser — everything runs locally. |
+| `manual/index.html` | A styled, end-user manual (for students), matching the playbook's design, served at the `/manual/` URL above. |
 | `README.md` | This file — orientation for anyone landing on the repo. |
 
 ---
@@ -34,14 +34,23 @@ It bundles a 48-question bank with layered model answers, the core HR Ops framew
 
 ---
 
-## Deploying to GitHub Pages
+## Repo structure & deployment
 
-1. Push these files to the repository.
-2. In **Settings → Pages**, set the source to the `main` branch (root).
-3. The files serve at `https://coryjburk.github.io/<repo>/<filename>.html`.
-4. Optionally rename `hr_ops_interview_playbook.html` to `index.html` so the playbook is the repo's default page.
+This repo is already deployed via **GitHub Pages**, serving from the `main` branch root:
 
-No build, bundler, or server is required — these are static, standalone HTML files.
+```
+intv-playbook-hrops_vc/
+├─ index.html          ← the playbook (served at the repo root)
+├─ manual/
+│  └─ index.html       ← the user manual (served at /manual/)
+└─ README.md
+```
+
+GitHub Pages automatically serves `index.html` as the default page for any folder, which is why the manual lives at a clean `/manual/` URL with no filename needed.
+
+**To update either page:** edit the file directly on GitHub (or push a new version), commit to `main`, and wait for the **Actions** tab to show the `pages build and deployment` workflow complete (usually under a minute) before checking the live URL. If a page seems stale right after a commit, hard-refresh (Ctrl+Shift+R / Cmd+Shift+R) or check in an incognito window — cached responses from before the deploy finished are the most common cause of a page looking "unchanged."
+
+No build tools, bundlers, or servers are required — both pages are static, standalone HTML files.
 
 ---
 
