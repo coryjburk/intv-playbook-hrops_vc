@@ -8,9 +8,7 @@ It bundles a 48-question bank with layered model answers, the core HR Ops framew
 
 ## Live links
 
-> Replace `<repo>` with this repository's name once it's published to GitHub Pages.
-
-- **Playbook:** `https://coryjburk.github.io/<repo>/hr_ops_interview_playbook.html`
+- **Playbook:** `https://coryjburk.github.io/intv-playbook-hrops_vc/`
 - **User manual (styled):** `https://coryjburk.github.io/<repo>/hr_ops_playbook_user_manual.html`
 
 ---
