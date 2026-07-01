@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Manual · HR Operations Interview Playbook · Eccles School of Business</title>
+<style>
+  :root{
+    --bg:#0d0d10; --bg-2:#15151a; --bg-3:#1c1c23; --bg-4:#23232b;
+    --border:#2b2b34; --border-2:#3a3a45;
+    --text:#ededf2; --text-dim:#a4a4b0; --text-faint:#6c6c78;
+    --red:#CC0000; --red-bright:#ff2e2e; --red-dim:rgba(204,0,0,.14);
+    --gold:#c9a84c; --gold-bright:#e3c876; --gold-dim:rgba(201,168,76,.13);
+    --green:#3fb950; --green-dim:rgba(63,185,80,.13);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;
+    -webkit-font-smoothing:antialiased;font-size:15.5px}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px 96px}
+
+  header{padding:52px 0 34px;border-bottom:1px solid var(--border);margin-bottom:8px}
+  .eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px}
+  h1{font-family:var(--serif);font-weight:700;font-size:38px;line-height:1.12;letter-spacing:-.5px;margin-bottom:14px}
+  h1 .accent{color:var(--gold)}
+  .sub{color:var(--text-dim);font-size:16px;max-width:640px}
+
+  nav.toc{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);
+    padding:20px 24px;margin:34px 0 44px}
+  nav.toc .toc-lab{font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-faint);font-weight:700;margin-bottom:12px}
+  nav.toc ol{list-style:none;counter-reset:toc;columns:2;column-gap:36px}
+  nav.toc li{counter-increment:toc;margin:7px 0;break-inside:avoid}
+  nav.toc a{color:var(--text-dim);text-decoration:none;font-size:14px;display:flex;gap:10px;align-items:baseline}
+  nav.toc a:hover{color:var(--gold-bright)}
+  nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--gold);font-weight:700;font-size:12px;font-variant-numeric:tabular-nums}
+
+  section{padding:34px 0;border-bottom:1px solid var(--border)}
+  section:last-of-type{border-bottom:none}
+  h2{font-family:var(--serif);font-weight:700;font-size:25px;letter-spacing:-.3px;margin-bottom:16px;display:flex;align-items:baseline;gap:12px}
+  h2 .n{font-family:var(--sans);font-size:13px;color:var(--gold);font-weight:700;letter-spacing:.5px}
+  h3{font-size:16px;font-weight:700;color:var(--text);margin:22px 0 8px}
+  p{color:var(--text-dim);margin-bottom:13px}
+  p strong, li strong{color:var(--text);font-weight:600}
+  ul,ol.steps{margin:6px 0 15px 4px;padding-left:20px}
+  li{color:var(--text-dim);margin-bottom:7px}
+  a{color:var(--gold-bright)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;
+    background:var(--bg-3);border:1px solid var(--border);border-radius:5px;padding:1px 6px;color:var(--text)}
+  .kbd{font-family:var(--sans);font-size:12.5px;background:var(--bg-4);border:1px solid var(--border-2);
+    border-radius:6px;padding:2px 8px;color:var(--text);font-weight:600}
+
+  .callout{border-radius:11px;padding:16px 18px;margin:18px 0;border:1px solid var(--border);background:var(--bg-2);font-size:14.5px}
+  .callout .lab{font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:7px;display:flex;align-items:center;gap:8px}
+  .callout p{margin-bottom:9px;color:var(--text-dim)}
+  .callout p:last-child{margin-bottom:0}
+  .callout.tip{border-color:rgba(63,185,80,.32);background:var(--green-dim)}
+  .callout.tip .lab{color:var(--green)}
+  .callout.important{border-color:rgba(201,168,76,.4);background:var(--gold-dim)}
+  .callout.important .lab{color:var(--gold-bright)}
+  .callout.heads{border-color:rgba(204,0,0,.34);background:var(--red-dim)}
+  .callout.heads .lab{color:var(--red-bright)}
+
+  .ex{background:var(--bg-3);border:1px solid var(--border);border-radius:8px;padding:11px 14px;margin:10px 0;
+    font-size:13.5px;color:var(--text-dim)}
+  .ex .said{color:var(--green)} .ex .heard{color:var(--red-bright)}
+
+  footer{padding:40px 0 0;color:var(--text-faint);font-size:13px;text-align:center}
+  footer b{color:var(--text-dim)}
+  @media(max-width:640px){ h1{font-size:30px} nav.toc ol{columns:1} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">University of Utah &middot; David Eccles School of Business</div>
+    <h1>HR Operations Interview Playbook<br><span class="accent">User Manual</span></h1>
+    <p class="sub">How to get the most out of the playbook &mdash; the question bank, frameworks, readiness tracker, voice practice studio, and AI coach &mdash; plus what to expect from each feature.</p>
+  </header>
+
+  <nav class="toc">
+    <div class="toc-lab">Contents</div>
+    <ol>
+      <li><a href="#start">Getting started</a></li>
+      <li><a href="#bank">The question bank</a></li>
+      <li><a href="#frameworks">Models, battlecard &amp; red flags</a></li>
+      <li><a href="#readiness">Readiness &amp; how scoring works</a></li>
+      <li><a href="#voice">Voice practice studio</a></li>
+      <li><a href="#coach">AI coach &amp; rubric logging</a></li>
+      <li><a href="#data">Your data &amp; privacy</a></li>
+      <li><a href="#requirements">Requirements &amp; troubleshooting</a></li>
+    </ol>
+  </nav>
+
+  <section id="start">
+    <h2><span class="n">01</span> Getting started</h2>
+    <p>The playbook is a single self-contained web page &mdash; nothing to install and no account to create. Open it in your browser and everything runs locally. It is built around <strong>48 HR Operations interview questions</strong> across eight categories, with a model answer, a deeper rationale, coaching notes, and the red flags to avoid for each.</p>
+    <p>A typical loop: browse or search the question bank, read a question's layered answers, practice your own answer out loud in the voice studio, generate an AI-coach prompt to get graded, then log the scores so the tool can track your readiness over time.</p>
+    <div class="callout tip">
+      <div class="lab">Tip</div>
+      <p>Practice out loud, not just by reading. Interviewers grade your <em>reasoning and delivery</em>, and saying an answer aloud surfaces gaps that silent reading hides.</p>
+    </div>
+  </section>
+
+  <section id="bank">
+    <h2><span class="n">02</span> The question bank</h2>
+    <p>The <strong>Question Bank</strong> is the core of the playbook. Each question expands to four layers:</p>
+    <ul>
+      <li><strong>Model answer</strong> &mdash; a strong, natural spoken response you could give.</li>
+      <li><strong>Deep dive</strong> &mdash; the fuller rationale and what a top answer covers, for understanding rather than memorizing.</li>
+      <li><strong>Coaching</strong> &mdash; how to score points and what differentiates a strong answer.</li>
+      <li><strong>Red flag</strong> &mdash; the mistakes that sink candidates on that question.</li>
+    </ul>
+    <h3>Finding questions</h3>
+    <ul>
+      <li><strong>Search</strong> &mdash; type any keyword to filter across questions and answers.</li>
+      <li><strong>Filter</strong> by category (HR Ops &amp; Service, HRIS &amp; Data, Compliance &amp; Risk, Process Improvement, Analytics &amp; Metrics, Lifecycle &amp; Experience, Stakeholder &amp; Leadership, Behavioral) or by difficulty (Foundational, Core, Advanced).</li>
+    </ul>
+    <h3>Tracking your progress</h3>
+    <ul>
+      <li>Mark a question <strong>reviewed</strong> once you've worked through it &mdash; the reviewed count updates as you go.</li>
+      <li>Set a <strong>confidence rating</strong> on each question so you can come back to the weak spots.</li>
+    </ul>
+    <div class="callout important">
+      <div class="lab">Good to know</div>
+      <p>Your reviewed marks and confidence ratings are saved automatically in <em>this browser</em> (see <a href="#data">Your data &amp; privacy</a>). They persist between sessions on the same device and browser.</p>
+    </div>
+  </section>
+
+  <section id="frameworks">
+    <h2><span class="n">03</span> Models, battlecard &amp; red flags</h2>
+    <p>Three reference sections back up the question bank:</p>
+    <ul>
+      <li><strong>Models &amp; Frameworks</strong> &mdash; eight models interviewers expect you to reach for (Employee Lifecycle, Tiered Service Delivery, SIPOC, DMAIC, RACI, the Ulrich operating model, Moments That Matter, and Root Cause Analysis). Each lists when to use it, the steps, and a tip. Name them naturally in answers, never robotically.</li>
+      <li><strong>Battlecard</strong> &mdash; an eight-section quick-reference: must-know concepts, power phrases, metrics to know cold, process principles, common mistakes, strong-candidate signals, senior-round differentiators, and a last-minute review.</li>
+      <li><strong>Red Flags</strong> &mdash; ten patterns that weaken candidates, each with the warning signals and how to fix them.</li>
+    </ul>
+    <div class="callout tip">
+      <div class="lab">Tip</div>
+      <p>The night before an interview, the <strong>Last-Minute Review</strong> battlecard section and the <strong>Red Flags</strong> are the highest-leverage things to skim.</p>
+    </div>
+  </section>
+
+  <section id="readiness">
+    <h2><span class="n">04</span> Readiness &amp; how scoring works</h2>
+    <p>The playbook grades your answers on a six-dimension rubric: <strong>Process &amp; Operational Rigor, Compliance &amp; Risk Awareness, Stakeholder &amp; Employee Insight, Data &amp; Metrics, Judgment in Ambiguity,</strong> and <strong>Communication &amp; Influence</strong>.</p>
+    <p>When your AI coach grades an answer (next section), you log the 1&ndash;5 score it gave on each dimension. The tool averages those into an overall score out of 100 and maps it to a readiness tier &mdash; from <em>Getting Started</em> through <em>Developing, Competitive, Interview Ready,</em> and <em>Offer Ready</em> &mdash; and tracks your trend across sessions.</p>
+    <div class="callout important">
+      <div class="lab">How to read it</div>
+      <p>The tiers are a self-coaching signal, not a guarantee. They reflect the scores you log, so they're only as honest as your inputs. Use the trend to see where you're improving and which dimensions need work &mdash; not as a verdict.</p>
+    </div>
+  </section>
+
+  <section id="voice">
+    <h2><span class="n">05</span> Voice practice studio</h2>
+    <p>The <strong>Voice Practice Studio</strong> lets you answer a question out loud while the tool transcribes you and reports your <strong>word count, duration, speaking pace (words per minute),</strong> and a rough <strong>filler-word</strong> tally. It's designed to build the muscle of answering aloud and to flag pacing problems (too fast, too slow) and obvious rambling.</p>
+    <h3>Using it</h3>
+    <ol class="steps">
+      <li>Open a question and start the practice studio.</li>
+      <li>Click <span class="kbd">Start speaking</span> and answer as if the interviewer is across the table.</li>
+      <li>Watch your live stats; click stop when done.</li>
+      <li>Reveal the model answer to compare, then generate an AI-coach prompt (next section).</li>
+    </ol>
+
+    <h3>Reading your transcript &mdash; important</h3>
+    <p>The transcript is produced by your <strong>browser's built-in speech recognition</strong>, not by the playbook and not by a recording of your voice. That engine is good at everyday words but has two real limits you should expect:</p>
+    <ul>
+      <li><strong>It mangles acronyms and jargon.</strong> Terms like &ldquo;HRIS,&rdquo; &ldquo;HRBP,&rdquo; &ldquo;FLSA,&rdquo; and &ldquo;COBRA&rdquo; aren't in its everyday vocabulary, so it substitutes the nearest familiar words.</li>
+      <li><strong>It drops or rewrites filler words.</strong> Speech engines are tuned to produce clean text, so &ldquo;um&rdquo; and &ldquo;uh&rdquo; are often deleted or turned into a real word like &ldquo;I'm.&rdquo;</li>
+    </ul>
+    <div class="ex">
+      You say: <span class="said">&ldquo;An HRIS is the core system&hellip;&rdquo;</span><br>
+      Browser hears: <span class="heard">&ldquo;finish your ass is the core system&hellip;&rdquo;</span>
+    </div>
+    <div class="callout heads">
+      <div class="lab">What this means for you</div>
+      <p>This is a limitation of the free browser engine, <em>not</em> a sign that you spoke unclearly and not a defect in the playbook. Speaking more slowly helps a little with everyday words, but it won't make the engine learn &ldquo;HRIS&rdquo; or reliably keep your &ldquo;um&rdquo;s.</p>
+      <p><strong>So use the transcript for what it's good at:</strong> your pace, your structure, whether you rambled or stayed tight, and roughly how long you spoke. Don't judge yourself on word-perfect spelling.</p>
+      <p><strong>Treat the filler-word count as a floor, not a precise measure.</strong> Because the engine drops fillers, a count of zero doesn't prove you were crisp &mdash; it may just mean the engine swallowed them. Trust your own ear for fillers, and let the AI coach assess your actual delivery.</p>
+    </div>
+    <p>A more accurate transcript &mdash; one that recognizes HR terminology and keeps your fillers &mdash; is on the roadmap, but it requires routing audio to a cloud speech service rather than the in-browser engine.</p>
+  </section>
+
+  <section id="coach">
+    <h2><span class="n">06</span> AI coach &amp; rubric logging</h2>
+    <p>The playbook doesn't grade your spoken answer itself &mdash; instead it <strong>generates a detailed prompt</strong> you paste into an AI assistant (such as Claude) to get a realistic mock interview or a critique. The prompt already includes the question, the evaluation criteria, and &mdash; in the practice studio &mdash; your transcribed answer.</p>
+    <h3>Two ways to use it</h3>
+    <ul>
+      <li><strong>From the AI Coach section</strong> &mdash; pick a category and a mode (for example, a mock interview or a critique) and copy the generated prompt.</li>
+      <li><strong>From the practice studio</strong> &mdash; after answering out loud, copy the prompt that bundles your answer with the grading rubric.</li>
+    </ul>
+    <h3>Logging your scores</h3>
+    <p>When the AI coach returns a score on each rubric dimension, tap the 1&ndash;5 value it gave for each. The tool rolls them into your overall score and readiness tier and updates your trend (see <a href="#readiness">Readiness</a>).</p>
+    <div class="callout tip">
+      <div class="lab">Tip</div>
+      <p>Because the transcript can garble acronyms, glance at it before sending the prompt. If a key term came out wrong, fix it in the pasted text so the AI grades what you actually said.</p>
+    </div>
+  </section>
+
+  <section id="data">
+    <h2><span class="n">07</span> Your data &amp; privacy</h2>
+    <p>Everything you do in the playbook &mdash; reviewed marks, confidence ratings, and logged rubric scores &mdash; is stored <strong>locally in your own browser</strong> using its built-in storage. It is not uploaded anywhere by the playbook.</p>
+    <ul>
+      <li>Your progress is tied to the <strong>specific browser and device</strong> you use. Switching browsers or devices, or clearing your browser data, starts you fresh.</li>
+      <li>Voice practice is transcribed by the browser; the playbook keeps your transcript only on the page while you work and doesn't store recordings.</li>
+      <li>When you use the AI coach, you choose what to paste into the assistant &mdash; that step is between you and that tool.</li>
+    </ul>
+  </section>
+
+  <section id="requirements">
+    <h2><span class="n">08</span> Requirements &amp; troubleshooting</h2>
+    <h3>Browser</h3>
+    <ul>
+      <li>Use a recent <strong>desktop Chrome</strong> (or another Chromium-based browser) for the best experience, especially the voice studio &mdash; in-browser speech recognition is most reliable there.</li>
+      <li>If the voice studio says speech isn't supported, your browser likely lacks the speech-recognition feature; switch to Chrome.</li>
+    </ul>
+    <h3>Microphone</h3>
+    <ul>
+      <li>The first time you start the voice studio, allow <strong>microphone access</strong> when prompted.</li>
+      <li>If you accidentally blocked it, re-enable mic permission for the page in your browser's site settings, then reload.</li>
+    </ul>
+    <h3>My progress disappeared</h3>
+    <ul>
+      <li>Progress is per browser and device. If it's gone, you're likely on a different browser/device, in a private/incognito window, or your browser data was cleared.</li>
+    </ul>
+    <h3>The transcript is wrong</h3>
+    <ul>
+      <li>Expected for acronyms and fillers &mdash; see <a href="#voice">Voice practice studio</a>. It's the browser engine, not your delivery. Judge yourself on pace and structure, not spelling.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><b>HR Operations Interview Playbook &mdash; User Manual</b> &middot; University of Utah, David Eccles School of Business</p>
+    <p style="margin-top:6px">Practice out loud &mdash; reasoning beats recall.</p>
+  </footer>
+
+</div>
+</body>
+</html>
