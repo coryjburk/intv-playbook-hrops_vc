@@ -9,7 +9,7 @@ It bundles a 48-question bank with layered model answers, the core HR Ops framew
 ## Live links
 
 - **Playbook:** `https://coryjburk.github.io/intv-playbook-hrops_vc/`
-- **User manual (styled):** `https://coryjburk.github.io/<repo>/hr_ops_playbook_user_manual.html`
+- **User manual (styled):** `https://coryjburk.github.io/hr-ops-playbook/manual/`
 
 ---
 
