@@ -1,6 +1,6 @@
 # HR Operations Interview Playbook
 
-An interactive, self-contained interview-prep tool for **HR Operations** roles, built for MBA candidates at the **University of Utah, David Eccles School of Business**.
+An interactive, self-contained interview-prep tool for **HR Operations** roles, built for MBA candidates at the **Full-Time MBA Program · David Eccles School of Business**.
 
 It bundles a 48-question bank with layered model answers, the core HR Ops frameworks, a final-round battlecard, common red flags, a readiness self-assessment, a voice practice studio, and an AI-coach prompt generator — all in a single HTML file with no build step, no dependencies, and no backend.
 
